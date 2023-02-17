@@ -17,8 +17,8 @@
             <div class="header">
                 <img src="./img/logo.svg" alt="logo">
                 <img src="./img/x.svg" alt="close">
-
             </div>
+
             <form action="contacts.html" id='myForm'>
                 <div class="main-question">
                     <p>Насколько вероятно, что Вы порекомендуете наш магазин
@@ -46,34 +46,38 @@
                             <td></td>
                         </tr>
                     </table>
-                    <input type="range" name="range" id="range" class="range styled-slider slider-progress" min="0" max="10" value="0">
+                    <input type="range" name="range" id="range" class="range styled-slider slider-progress" min="0"
+                        max="10" value="0">
                 </fieldset>
 
                 <!-- <div class="container hidden"> -->
-                <fieldset id="q-1" class="hidden">
-                    <p id="qp-1" class="hidden">Укажите, что именно Вы бы хотели изменить?</p>
-                    <p id="qp-2" class="hidden">Укажите, что именно Вы бы хотели улучшить ?</p>
-                    <p id="qp-3" class="hidden">Укажите, что именно Вам понравилось в магазине ?</p>
-                    <input type="checkbox" id="quality" name="grade" value="quality">
-                    <label for="quality">Качество продукции</label>
-                    <input type="checkbox" id="prices" name="grade" value="prices">
-                    <label for="prices">Цены</label>
-                    <input type="checkbox" id="knowledge" name="grade" value="knowledge">
-                    <label for="knowledge">Знания персонала и качество обслуживания</label>
-                    <input type="checkbox" id="atmosphere" name="grade" value="atmosphere">
-                    <label for="atmosphere">Атмосфера в магазине</label>
-                    <input type="checkbox" id="choice" name="grade" value="choice">
-                    <label for="choice">Ассортимент магазина</label>
-                    <input type="checkbox" id="another" name="grade" value="another">
-                    <label for="another">Другое</label>
-                </fieldset>
-                <!-- </div> -->
 
-                <fieldset id="q-2" class="comment hidden">
-                    <input type="text" id="comment1" name="comment1" value="" placeholder="Комментарий"
-                        onchange="q2Handler(event)">
-                    <!-- <p class="error hidden" id="err-2">Пожалуйста, введите комментарий</p> -->
-                </fieldset>
+                <div style="background: #F3F3F3; padding: 18px 16px;">
+                    <fieldset id="q-1" class="hidden">
+                        <p id="qp-1" class="hidden">Укажите, что именно Вы бы хотели изменить?</p>
+                        <p id="qp-2" class="hidden">Укажите, что именно Вы бы хотели улучшить ?</p>
+                        <p id="qp-3" class="hidden">Укажите, что именно Вам понравилось в магазине ?</p>
+                        <input type="checkbox" id="quality" name="grade" value="quality">
+                        <label for="quality">Качество продукции</label>
+                        <input type="checkbox" id="prices" name="grade" value="prices">
+                        <label for="prices">Цены</label>
+                        <input type="checkbox" id="knowledge" name="grade" value="knowledge">
+                        <label for="knowledge">Знания персонала и качество обслуживания</label>
+                        <input type="checkbox" id="atmosphere" name="grade" value="atmosphere">
+                        <label for="atmosphere">Атмосфера в магазине</label>
+                        <input type="checkbox" id="choice" name="grade" value="choice">
+                        <label for="choice">Ассортимент магазина</label>
+                        <input type="checkbox" id="another" name="grade" value="another">
+                        <label for="another">Другое</label>
+                    </fieldset>
+                    <!-- </div> -->
+
+                    <fieldset id="q-2" class="comment hidden">
+                        <input type="text" id="comment1" name="comment1" value="" placeholder="Комментарий"
+                            onchange="q2Handler(event)">
+                        <!-- <p class="error hidden" id="err-2">Пожалуйста, введите комментарий</p> -->
+                    </fieldset>
+                </div>
             </form>
         </div>
 
