@@ -33,7 +33,9 @@
                 <div class="terms">
                     <div class="term1">
                         <input type="checkbox" id="privacy" name="privacy" value="">
-                        <label for="privacy">Я ознакомлен и согласен с условиями обработки моих персональных
+                        <label for="privacy">Я ознакомлен и согласен с <span class="blue-span">условиями обработки
+                            </span>моих
+                            персональных
                             данных</label>
                     </div>
                     <div class="term-2">
@@ -46,6 +48,8 @@
 
         </div>
 
+        <input type="submit" id="dontSend" class="hidden" form="myContacts" value="Отправить" disabled
+            onclick="return false;" style="display:none;">
         <input type="submit" id="send" class="hidden" form="myContacts" value="Отправить">
     </div>
 
