@@ -10,3 +10,10 @@ document.getElementById("myContacts").addEventListener("input", function (e) {
     }
 })
 
+document.getElementById("name").addEventListener("change", function () {
+    document.getElementById("name").blur()
+})
+
+document.getElementById("email").addEventListener("change", function () {
+    document.getElementById("name").blur()
+})
