@@ -73,15 +73,14 @@
                     <!-- </div> -->
 
                     <fieldset id="q-2" class="comment hidden">
-                        <input type="text" id="comment1" name="comment1" value="" placeholder="Комментарий"
-                            onchange="q2Handler(event)">
-                        <!-- <p class="error hidden" id="err-2">Пожалуйста, введите комментарий</p> -->
+                        <input type="text" id="comment1" name="comment1" value="" placeholder="Комментарий">
                     </fieldset>
                 </div>
             </form>
         </div>
 
-
+        <input type="submit" id="dontSend" class="hidden" form="myForm" value="Отправить" disabled
+            onclick="return false;" style="display:none;">
         <input type="submit" id="send" class="hidden" form="myForm" value="Далее">
     </div>
 

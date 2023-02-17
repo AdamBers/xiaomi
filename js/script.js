@@ -54,7 +54,11 @@ for (let e of document.querySelectorAll('input[type="range"].slider-progress')) 
 
 
 
-
+document.getElementById("comment1").addEventListener("change", function (e) {
+    document.getElementById("comment1").blur()
+    document.getElementById("comment1").inputMode = "none"
+    document.getElementById("comment1").inputMode = "text"
+})
 
 
 
