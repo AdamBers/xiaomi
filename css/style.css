@@ -55,7 +55,7 @@ body {
 
 form {
     /* margin: 0 16px; */
-    
+
     z-index: 0;
 }
 
@@ -802,4 +802,9 @@ input[type=range].styled-slider.slider-progress:active::-ms-fill-lower {
 
 #q-0 {
     margin: 0 16px;
+}
+
+#content {
+    background: #F3F3F3;
+    padding: 18px 16px;
 }

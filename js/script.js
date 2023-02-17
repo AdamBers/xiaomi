@@ -9,6 +9,7 @@ function goTo(element) {
 document.getElementById("range").addEventListener("change", function (e) {
     document.getElementById("q-1").classList.remove("hidden")
     document.getElementById("q-2").classList.remove("hidden")
+    document.getElementById("content").classList.remove("hidden")
 
     if (e.target.value <= 6) {
         document.getElementById("qp-1").classList.remove("hidden")
