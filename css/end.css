@@ -24,7 +24,7 @@ body {
     border: 1px solid rgba(35, 35, 35, 0.1);
     box-shadow: 6px 6px 12px #c5c5c5,
         -6px -6px 12px #fbfbfb;
-    background: url(/img/bg-thanks.svg);
+    background: url(/img/bg.png);
     /* background-size: cover; */
     background-repeat: no-repeat;
 
