@@ -21,13 +21,10 @@ body {
     max-width: 500px;
     margin: 0 auto;
     min-height: 100%;
-    border: 1px solid rgba(35, 35, 35, 0.1);
     box-shadow: 6px 6px 12px #c5c5c5,
         -6px -6px 12px #fbfbfb;
     background: url("/img/bg-thanks.svg");
     background-size: 100% 100%;
-    background-position: center center;
-    background-repeat: no-repeat;
 }
 
 

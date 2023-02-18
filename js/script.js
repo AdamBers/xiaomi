@@ -4,9 +4,16 @@ function goTo(element) {
             behavior: 'smooth',
             block: 'start',
         })
-    }, 500)
+    }, 600)
 }
+
+
+
 document.getElementById("range").addEventListener("change", function (e) {
+    document.getElementById("initial-range").style.display = "none"
+
+    document.getElementById("output").classList.remove("hidden")
+
     document.getElementById("q-1").classList.remove("hidden")
     document.getElementById("q-2").classList.remove("hidden")
     document.getElementById("content").classList.remove("hidden")
@@ -26,6 +33,10 @@ document.getElementById("range").addEventListener("change", function (e) {
         document.getElementById("qp-2").classList.add("hidden")
         document.getElementById("qp-1").classList.add("hidden")
     }
+
+
+    let leftPos = e.target.value * 10 + "%"
+    document.getElementById("output").style.left = `calc(${leftPos} - 24px)`
     goTo("q-1")
 })
 
