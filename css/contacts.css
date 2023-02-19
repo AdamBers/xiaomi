@@ -251,4 +251,11 @@ input[type=checkbox]:checked+label::before {
 .subp {
     display: block;
     width: calc(100% - 60px);
+    font-family: 'Myriad Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+  
+    letter-spacing: -0.02em;
 }

@@ -1,3 +1,9 @@
+@font-face {
+    font-family: "Myriad Pro";
+    src: url(/fonts/myriad/MYRIADPRO-REGULAR.OTF);
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -583,15 +589,15 @@ tr {
 th {
     width: calc(100% / 5);
     height: 6px;
-    border-right: 1.5px solid #898989;
-    border-left: 1.5px solid #898989;
+    border-right: 1.5px solid #E7E7E7;
+    border-left: 1.5px solid #E7E7E7;
 }
 
 td {
     width: calc(100% / 10);
     height: 10px;
-    border-right: 1.5px solid #898989;
-    border-left: 1.5px solid #898989;
+    border-right: 1.5px solid #E7E7E7;
+    border-left: 1.5px solid #E7E7E7;
 }
 
 
