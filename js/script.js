@@ -10,6 +10,19 @@ function goTo(element) {
 document.getElementById("range").addEventListener("change", function (e) {
     document.getElementById("initial-range").style.display = "none"
 
+    // console.log(document.getElementById("knowledge").checked = false)
+
+    document.getElementById("knowledge").checked = false
+    document.getElementById("quality").checked = false
+    document.getElementById("prices").checked = false
+    document.getElementById("atmosphere").checked = false
+    document.getElementById("choice").checked = false
+    document.getElementById("another").checked = false
+
+
+
+
+
     setTimeout(function () {
         document.getElementById("knowledge").style.top = document.getElementById("knowledge").labels[0].offsetHeight / 2 + 7 + "px"
         document.getElementById("quality").style.top = document.getElementById("quality").labels[0].offsetHeight / 2 + 7 + "px"
@@ -18,6 +31,7 @@ document.getElementById("range").addEventListener("change", function (e) {
         document.getElementById("choice").style.top = document.getElementById("choice").labels[0].offsetHeight / 2 + 7 + "px"
         document.getElementById("another").style.top = document.getElementById("another").labels[0].offsetHeight / 2 + 7 + "px"
     }, 100)
+
 
     document.getElementById("output").classList.remove("hidden")
     document.getElementById("q-1").classList.remove("hidden")
