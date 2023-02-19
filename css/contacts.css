@@ -1,8 +1,13 @@
+@font-face {
+    font-family: "Myriad Pro";
+    src: url(/fonts/myriad/MYRIADPRO-REGULAR.OTF);
+}
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* background-color: #fff; */
     user-select: none;
     text-size-adjust: none;
     text-size-adjust: auto;
@@ -19,10 +24,7 @@ html {
 body {
     height: 100%;
     min-height: 100%;
-
 }
-
-
 
 .main-container {
     display: flex;
@@ -38,7 +40,6 @@ body {
 
 }
 
-
 input[type="submit"] {
     position: relative;
     bottom: 12px;
@@ -50,8 +51,6 @@ input[type="submit"] {
     border: none;
     cursor: pointer;
     width: inherit;
-
-
     font-family: 'Myriad Pro';
     font-style: normal;
     font-weight: 600;
@@ -59,10 +58,6 @@ input[type="submit"] {
     line-height: 22px;
     letter-spacing: -0.02em;
     color: #FAFAFA;
-
-
-
-
 }
 
 form {
@@ -81,23 +76,14 @@ form {
     padding: 17px;
 }
 
-
-
-
-
 .title {
     font-family: 'Calibri';
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
     line-height: 24px;
-    /* identical to box height, or 100% */
-
     text-align: center;
     letter-spacing: -0.02em;
-
-    /* Black */
-
     color: #191919;
     margin: 0 auto;
     margin-top: 42px;
@@ -119,36 +105,76 @@ form {
     margin-left: 15px;
 }
 
-input[type=text] {
-    border-bottom: none;
-    background: #FFFFFF;
-    border: 1.5px solid #ED712E;
-    border-radius: 8px;
-    min-height: 48px;
-    margin-bottom: 0;
-    padding-left: 15px;
 
-
-    font-family: 'Myriad Pro';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 24px;
-    /* identical to box height, or 120% */
-
-    display: flex;
-    align-items: center;
-    letter-spacing: -0.02em;
-
-    /* Dark */
-
-    color: #3B3B3B;
-}
 
 form, .wrapper {
     background-color: #fff;
 }
 
+.contact-info {
+    margin-bottom: 18px;
+}
+
+.email {
+    margin-bottom: 24px;
+}
+
+.terms {
+    margin-bottom: 50px;
+}
+
+.term-1, .term-2 {
+    display: flex;
+    position: relative;
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 15px;
+
+}
+
+
+
+#name, #email {
+    width: 100%;
+    background: #FFFFFF;
+    border: 1.5px solid #DBDBDC;
+    border-radius: 8px;
+}
+
+#name:focus, #email:focus {
+    outline: none !important;
+    border: 1.5px solid #ED712E !important;
+}
+
+
+.hidden {
+    display: none;
+}
+
+.blue-span {
+    color: #0C84FF
+}
+
+
+
+input[type=text] {
+    border-bottom: none;
+    background: #FFFFFF;
+    border: 1.5px solid #DBDBDC;
+    border-radius: 8px;
+    min-height: 48px;
+    margin-bottom: 0;
+    padding-left: 15px;
+    font-family: 'Myriad Pro';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.02em;
+    color: #3B3B3B;
+}
 
 input[type=text]::placeholder {
     font-family: 'Myriad Pro';
@@ -161,12 +187,15 @@ input[type=text]::placeholder {
 }
 
 
-.contact-info {
-    margin-bottom: 18px;
+input[type=checkbox] {
+    display: none;
 }
 
-.email {
-    margin-bottom: 24px;
+
+label {
+    background-color: #fff;
+    color: #3B3B3B;
+
 }
 
 input[type=checkbox]~label {
@@ -175,49 +204,51 @@ input[type=checkbox]~label {
     font-weight: 400;
     font-size: 14px;
     line-height: 18px;
-    padding: 5px;
-    /* display: flex;
-    align-items: center; */
+    align-items: center;
     letter-spacing: -0.02em;
     color: #3B3B3B;
     position: static;
-    padding-left: 30px;
     cursor: pointer;
 }
 
 
-input[type=checkbox]:checked+label {
-    background-color: #fff;
-    color: #3B3B3B;
-}
 
-
-.terms {
-    margin-bottom: 20px;
-}
-
-.term1, .term2 {
+input[type=checkbox]+label {
     display: flex;
-    justify-content: start;
-    align-items: center;
-}
+    /* padding-left: 48px; */
+    width: calc(100% - 48px);
 
-input[type="checkbox"] {
-    top: -5px
-}
-
-#name, #email {
-    width: 100%;
-}
-
-.hidden {
-    display: none;
-}
-
-.blue-span {
-    color: #0C84FF
 }
 
 
+input[type=checkbox]+label::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: relative;
+    width: 18px;
+    height: 18px;
+    margin-right: 15px;
+    margin-left: 15px;
+    background: url("/img/notChecked.png");
+    background-size: 100% 100%;
+}
+
+input[type=checkbox]:checked+label::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: relative;
+    width: 18px;
+    height: 18px;
+    margin-right: 15px;
+    margin-left: 15px;
+    background: url("/img/checked2.png");
+    background-size: 100% 100%;
+}
 
 
+.subp {
+    display: block;
+    width: calc(100% - 60px);
+}

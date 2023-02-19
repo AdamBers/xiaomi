@@ -116,7 +116,7 @@ form {
 }
 
 input[type="checkbox"] {
-    display: inline-block;
+    display: block;
     position: relative;
     left: 20px;
     top: 38px;
@@ -154,6 +154,8 @@ input[type="submit"] {
 input[type=checkbox]:checked+label {
     background-color: #ED712E;
     color: #fff;
+    display: flex;
+    align-items: center;
 }
 
 .comment {
@@ -619,7 +621,7 @@ td {
 }
 
 
-
+label {}
 
 
 
@@ -748,7 +750,7 @@ input[type=range].styled-slider::-ms-thumb {
     width: 2em;
     height: 2em;
     border-radius: 1em;
-    background: #007cf8;
+    background: #b7784c;
     border: none;
     box-shadow: 0 0 2px black;
     margin-top: 0;
@@ -765,7 +767,7 @@ input[type=range].styled-slider::-ms-track {
 }
 
 input[type=range].styled-slider::-ms-thumb:hover {
-    background: #0061c3;
+    background: #b7784c;
 }
 
 input[type=range].styled-slider:hover::-ms-track {
@@ -814,11 +816,11 @@ input[type=range].styled-slider.slider-progress:active::-ms-fill-lower {
 
 
 output {
-    position: absolute;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    top: 145px;
+    top: -165px;
     left: calc(50% - 24px);
     width: 48px;
     height: 57px;
@@ -832,6 +834,7 @@ output {
     text-align: center;
     letter-spacing: -0.02em;
     color: #FFFFFF;
+    margin-bottom: -40px;
 }
 
 
@@ -844,6 +847,9 @@ output {
     position: relative;
     top: -70px;
 }
+
+
+
 
 
 
@@ -893,4 +899,19 @@ input[type=checkbox]:checked:after {
     position: absolute;
     top: 0;
     left: 7px;
+}
+
+
+
+
+#comment1 {
+    width: 100%;
+    background: #FFFFFF;
+    border: 1.5px solid #DBDBDC;
+    border-radius: 8px;
+}
+
+#comment1:focus {
+    outline: none !important;
+    border: 1.5px solid #ED712E !important;
 }
