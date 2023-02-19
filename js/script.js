@@ -18,6 +18,7 @@ document.getElementById("range").addEventListener("change", function (e) {
     document.getElementById("atmosphere").checked = false
     document.getElementById("choice").checked = false
     document.getElementById("another").checked = false
+    document.getElementById("send").classList.add("hidden")
 
 
 
