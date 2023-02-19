@@ -21,3 +21,7 @@ document.getElementById("email").addEventListener("change", function () {
     document.getElementById("email").inputMode = "none"
     document.getElementById("email").inputMode = "text"
 })
+
+function checkBoxHandler() {
+    console.log("defined")
+}
