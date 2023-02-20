@@ -851,8 +851,8 @@ output {
     border-radius: 14px 0 0 14px;
     background: #898989;
     display: block;
-    position: relative;
-    top: -70px;
+    position: absolute;
+    top: 0px;
 }
 
 
@@ -921,4 +921,8 @@ input[type=checkbox]:checked:after {
 #comment1:focus {
     outline: none !important;
     border: 1.5px solid #ED712E !important;
+}
+
+.range-container {
+    position: relative;
 }
