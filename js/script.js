@@ -7,11 +7,15 @@ function goTo(element) {
     }, 600)
 }
 
-document.getElementById("range").addEventListener("change", function (e) {
+function hide(e) {
+    console.log(e)
+}
+
+
+
+document.getElementById("range").addEventListener("click", function (e) {
     document.getElementById("initial-range").style.display = "none"
-
-    // console.log(document.getElementById("knowledge").checked = false)
-
+    console.log(e.target.value)
     document.getElementById("knowledge").checked = false
     document.getElementById("quality").checked = false
     document.getElementById("prices").checked = false

@@ -485,6 +485,7 @@ input[type=text]::placeholder {
     width: 100%;
     margin: auto;
     margin-bottom: 42px;
+    
 }
 
 .hidden {
@@ -853,6 +854,7 @@ output {
     display: block;
     position: absolute;
     top: 0px;
+    pointer-events: none;
 }
 
 
