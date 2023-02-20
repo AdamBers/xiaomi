@@ -9,6 +9,10 @@ function goTo(element) {
 
 document.getElementById("range").addEventListener("click", function (e) {
     document.getElementById("initial-range").style.display = "none"
+
+    console.log("11111")
+
+    document.getElementById("range").step = "1"
     console.log(e.target.value)
     document.getElementById("knowledge").checked = false
     document.getElementById("quality").checked = false
@@ -49,7 +53,7 @@ document.getElementById("range").addEventListener("click", function (e) {
 
     let leftPos = e.target.value * 10 + "%"
     document.getElementById("output").style.left = `calc(${leftPos} - 24px)`
-    goTo("q-1")
+    // goTo("q-1")
 })
 
 document.getElementById("q-1").addEventListener("change", function (e) {
