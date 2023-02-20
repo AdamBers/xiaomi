@@ -51,7 +51,7 @@ document.getElementById("range").addEventListener("click", function (e) {
         document.getElementById("qp-1").classList.add("hidden")
     }
 
-    let leftPos = e.target.value * 10 + "%"
+    var leftPos = e.target.value * 10 + "%"
     document.getElementById("output").style.left = `calc(${leftPos} - 24px)`
     // goTo("q-1")
 })
@@ -65,7 +65,7 @@ document.getElementById("q-1").addEventListener("change", function (e) {
     }
 })
 
-for (let e of document.querySelectorAll('input[type="range"].slider-progress')) {
+for (var e of document.querySelectorAll('input[type="range"].slider-progress')) {
     e.style.setProperty('--value', e.value);
     e.style.setProperty('--min', e.min == '' ? '0' : e.min);
     e.style.setProperty('--max', e.max == '' ? '100' : e.max);
