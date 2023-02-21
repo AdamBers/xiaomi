@@ -73,7 +73,7 @@ document.getElementById("range").addEventListener("touchend", function (e) {
 
     let leftPos = e.target.value * 10 + "%"
     document.getElementById("output").style.left = `calc(${leftPos} - 24px)`
-    // goTo("q-1")
+    goTo("q-1")
 })
 
 
@@ -144,7 +144,7 @@ document.getElementById("range").addEventListener("mouseup", function (e) {
 
     let leftPos = e.target.value * 10 + "%"
     document.getElementById("output").style.left = `calc(${leftPos} - 24px)`
-    // goTo("q-1")
+    goTo("q-1")
 })
 
 
