@@ -78,8 +78,8 @@ document.getElementById("range").addEventListener("touchend", function (e) {
 })
 
 
-document.getElementById("range").addEventListener("mouseup", function (e) {
-    console.log("mouseup")
+document.getElementById("range").addEventListener("click", function (e) {
+    console.log("click")
     e.preventDefault();
     e.stopPropagation();
 
