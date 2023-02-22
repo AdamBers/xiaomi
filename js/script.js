@@ -8,8 +8,8 @@ function goTo(element) {
 }
 
 document.getElementById("range").addEventListener("touchend", function (e) {
-    console.log("touched")
-
+    // console.log("touched")
+    e.preventDefault();
 
     if (e.target.value > 0) {
         document.getElementById("initial-range").style.background = "#ED712E"
@@ -79,6 +79,7 @@ document.getElementById("range").addEventListener("touchend", function (e) {
 
 document.getElementById("range").addEventListener("mouseup", function (e) {
     console.log("mouseup")
+    e.preventDefault();
 
 
     if (e.target.value > 0) {
