@@ -126,6 +126,7 @@ input[type="checkbox"] {
     position: relative;
     left: 20px;
     top: 34px;
+    
     /* display: inline-block; */
     /* width: 46px; */
     /* display: none; */
@@ -831,7 +832,7 @@ output {
     left: calc(50% - 24px);
     width: 48px;
     height: 57px;
-    background: url("../img/rect.png");
+    background: url("../img/rect.svg");
     background-size: 100% 100%;
     font-family: 'Poppins';
     font-style: normal;
