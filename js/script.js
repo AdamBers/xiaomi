@@ -74,80 +74,80 @@ document.getElementById("range").addEventListener("touchend", function (e) {
 
     let leftPos = e.target.value * 10 + "%"
     document.getElementById("output").style.left = `calc(${leftPos} - 24px)`
-    // goTo("q-1")
+    goTo("q-1")
 })
 
 
-// document.getElementById("range").addEventListener("mouseup", function (e) {
-//     console.log("mouseup")
-//     e.preventDefault();
-//     e.stopPropagation();
+document.getElementById("range").addEventListener("mouseup", function (e) {
+    console.log("mouseup")
+    e.preventDefault();
+    e.stopPropagation();
 
-//     if (e.target.value > 0) {
-//         document.getElementById("initial-range").style.background = "#ED712E"
-//     }
-//     if (e.target.value == 0) {
-//         document.getElementById("initial-range").style.background = "#898989"
-//     }
+    if (e.target.value > 0) {
+        document.getElementById("initial-range").style.background = "#ED712E"
+    }
+    if (e.target.value == 0) {
+        document.getElementById("initial-range").style.background = "#898989"
+    }
 
-//     if (e.target.value == 10) {
-//         document.getElementById("initial-range-right").style.background = "#ED712E"
-//     }
+    if (e.target.value == 10) {
+        document.getElementById("initial-range-right").style.background = "#ED712E"
+    }
 
-//     if (e.target.value < 10) {
-//         document.getElementById("initial-range-right").style.background = "#E7E7E7"
-//     }
+    if (e.target.value < 10) {
+        document.getElementById("initial-range-right").style.background = "#E7E7E7"
+    }
 
-//     // document.getElementById("initial-range").style.display = "none"
+    // document.getElementById("initial-range").style.display = "none"
 
-//     // console.log(document.getElementById("knowledge").checked = false)
+    // console.log(document.getElementById("knowledge").checked = false)
 
-//     document.getElementById("knowledge").checked = false
-//     document.getElementById("quality").checked = false
-//     document.getElementById("prices").checked = false
-//     document.getElementById("atmosphere").checked = false
-//     document.getElementById("choice").checked = false
-//     document.getElementById("another").checked = false
-//     document.getElementById("send").classList.add("hidden")
-
-
+    document.getElementById("knowledge").checked = false
+    document.getElementById("quality").checked = false
+    document.getElementById("prices").checked = false
+    document.getElementById("atmosphere").checked = false
+    document.getElementById("choice").checked = false
+    document.getElementById("another").checked = false
+    document.getElementById("send").classList.add("hidden")
 
 
 
-//     setTimeout(function () {
-//         document.getElementById("knowledge").style.top = document.getElementById("knowledge").labels[0].offsetHeight / 2 + 7 + "px"
-//         document.getElementById("quality").style.top = document.getElementById("quality").labels[0].offsetHeight / 2 + 7 + "px"
-//         document.getElementById("prices").style.top = document.getElementById("prices").labels[0].offsetHeight / 2 + 7 + "px"
-//         document.getElementById("atmosphere").style.top = document.getElementById("atmosphere").labels[0].offsetHeight / 2 + 7 + "px"
-//         document.getElementById("choice").style.top = document.getElementById("choice").labels[0].offsetHeight / 2 + 7 + "px"
-//         document.getElementById("another").style.top = document.getElementById("another").labels[0].offsetHeight / 2 + 7 + "px"
-//     }, 100)
 
 
-//     document.getElementById("output").classList.remove("hidden")
-//     document.getElementById("q-1").classList.remove("hidden")
-//     document.getElementById("q-2").classList.remove("hidden")
-//     document.getElementById("content").classList.remove("hidden")
-//     if (e.target.value <= 6) {
-//         document.getElementById("qp-1").classList.remove("hidden")
-//         document.getElementById("qp-2").classList.add("hidden")
-//         document.getElementById("qp-3").classList.add("hidden")
-//     }
-//     if (e.target.value == 7 || e.target.value == 8) {
-//         document.getElementById("qp-2").classList.remove("hidden")
-//         document.getElementById("qp-1").classList.add("hidden")
-//         document.getElementById("qp-3").classList.add("hidden")
-//     }
-//     if (e.target.value == 9 || e.target.value == 10) {
-//         document.getElementById("qp-3").classList.remove("hidden")
-//         document.getElementById("qp-2").classList.add("hidden")
-//         document.getElementById("qp-1").classList.add("hidden")
-//     }
+    setTimeout(function () {
+        document.getElementById("knowledge").style.top = document.getElementById("knowledge").labels[0].offsetHeight / 2 + 7 + "px"
+        document.getElementById("quality").style.top = document.getElementById("quality").labels[0].offsetHeight / 2 + 7 + "px"
+        document.getElementById("prices").style.top = document.getElementById("prices").labels[0].offsetHeight / 2 + 7 + "px"
+        document.getElementById("atmosphere").style.top = document.getElementById("atmosphere").labels[0].offsetHeight / 2 + 7 + "px"
+        document.getElementById("choice").style.top = document.getElementById("choice").labels[0].offsetHeight / 2 + 7 + "px"
+        document.getElementById("another").style.top = document.getElementById("another").labels[0].offsetHeight / 2 + 7 + "px"
+    }, 100)
 
-//     let leftPos = e.target.value * 10 + "%"
-//     document.getElementById("output").style.left = `calc(${leftPos} - 24px)`
-//     // goTo("q-1")
-// })
+
+    document.getElementById("output").classList.remove("hidden")
+    document.getElementById("q-1").classList.remove("hidden")
+    document.getElementById("q-2").classList.remove("hidden")
+    document.getElementById("content").classList.remove("hidden")
+    if (e.target.value <= 6) {
+        document.getElementById("qp-1").classList.remove("hidden")
+        document.getElementById("qp-2").classList.add("hidden")
+        document.getElementById("qp-3").classList.add("hidden")
+    }
+    if (e.target.value == 7 || e.target.value == 8) {
+        document.getElementById("qp-2").classList.remove("hidden")
+        document.getElementById("qp-1").classList.add("hidden")
+        document.getElementById("qp-3").classList.add("hidden")
+    }
+    if (e.target.value == 9 || e.target.value == 10) {
+        document.getElementById("qp-3").classList.remove("hidden")
+        document.getElementById("qp-2").classList.add("hidden")
+        document.getElementById("qp-1").classList.add("hidden")
+    }
+
+    let leftPos = e.target.value * 10 + "%"
+    document.getElementById("output").style.left = `calc(${leftPos} - 24px)`
+    goTo("q-1")
+})
 
 
 
