@@ -12,8 +12,8 @@ function goTo(element) {
 
 document.getElementById("range").addEventListener("change", function (e) {
     console.log("click")
-    e.preventDefault();
-    e.stopPropagation();
+    // e.preventDefault();
+    // e.stopPropagation();
 
     if (e.target.value > 0) {
         document.getElementById("initial-range").style.background = "#ED712E"
