@@ -13,7 +13,7 @@ function rangeHandler(e) {
     console.log("click")
     // e.preventDefault();
     // e.stopPropagation();
-    alert("hello")
+    // alert("hello")
 
     if (e.target.value > 0) {
         document.getElementById("initial-range").style.background = "#ED712E"
