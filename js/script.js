@@ -11,7 +11,7 @@ function goTo(element) {
 
 function rangeHandler(e) {
     console.log("click")
-    // e.preventDefault();
+    e.preventDefault();
     // e.stopPropagation();
     // alert("hello")
 
