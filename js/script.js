@@ -12,12 +12,13 @@ function rangeHandler(e) {
     // e.preventDefault();
     // e.stopPropagation();
     // alert("hello")
+    
 
     if (e.target.value > 0) {
         document.getElementById("initial-range").style.background = "#ED712E"
     }
     if (e.target.value == 0) {
-        document.getElementById("initial-range").style.background = "#898989"
+        document.getElementById("initial-range").style.background = "#ED712E"
     }
 
     if (e.target.value == 10) {
