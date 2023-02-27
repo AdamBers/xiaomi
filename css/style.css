@@ -486,6 +486,7 @@ input[type=text]::placeholder {
     width: 100%;
     margin: auto;
     margin-bottom: 42px;
+    z-index: 1000;
 }
 
 .hidden {
