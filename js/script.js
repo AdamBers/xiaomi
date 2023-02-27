@@ -111,5 +111,5 @@ document.getElementById("comment1").addEventListener("change", function (e) {
 
 
 
-document.getElementById("range").addEventListener("touchend", (e) => rangeHandler(e))
+document.getElementById("range").addEventListener("click", (e) => rangeHandler(e))
 
