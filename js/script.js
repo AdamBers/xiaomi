@@ -7,10 +7,8 @@ function goTo(element) {
     }, 600)
 }
 
-
-
 function rangeHandler(e) {
-    console.log(e.target.id)
+    console.log(e.target)
     // e.preventDefault();
     // e.stopPropagation();
     // alert("hello")
@@ -19,7 +17,7 @@ function rangeHandler(e) {
         document.getElementById("initial-range").style.background = "#ED712E"
     }
     if (e.target.value == 0) {
-        document.getElementById("initial-range").style.background = "#ED712E"
+        document.getElementById("initial-range").style.background = "#898989"
     }
 
     if (e.target.value == 10) {
@@ -42,10 +40,6 @@ function rangeHandler(e) {
     document.getElementById("another").checked = false
     document.getElementById("send").classList.add("hidden")
 
-
-
-
-
     setTimeout(function () {
         document.getElementById("knowledge").style.top = document.getElementById("knowledge").labels[0].offsetHeight / 2 + 7 + "px"
         document.getElementById("quality").style.top = document.getElementById("quality").labels[0].offsetHeight / 2 + 7 + "px"
@@ -54,7 +48,6 @@ function rangeHandler(e) {
         document.getElementById("choice").style.top = document.getElementById("choice").labels[0].offsetHeight / 2 + 7 + "px"
         document.getElementById("another").style.top = document.getElementById("another").labels[0].offsetHeight / 2 + 7 + "px"
     }, 100)
-
 
     document.getElementById("output").classList.remove("hidden")
     document.getElementById("q-1").classList.remove("hidden")
@@ -81,12 +74,8 @@ function rangeHandler(e) {
     goTo("q-1")
 }
 
-
 document.getElementById("range").addEventListener("click", (e) => rangeHandler(e))
-document.getElementById("initial-range").addEventListener("click", (e) => rangeHandler(e))
-document.getElementById("initial-range-right").addEventListener("click", (e) => rangeHandler(e))
-
-
+document.getElementById("range").addEventListener("touchend", (e) => rangeHandler(e))
 
 // document.getElementById("range").addEventListener("touchstart", (e) => rangeHandler(e))
 // document.getElementById("range").addEventListener("touchmove", (e) => rangeHandler(e))
@@ -104,7 +93,7 @@ document.getElementById("q-1").addEventListener("change", function (e) {
 for (let e of document.querySelectorAll('input[type="range"].slider-progress')) {
     e.style.setProperty('--value', e.value);
     e.style.setProperty('--min', e.min == '' ? '0' : e.min);
-    e.style.setProperty('--max', e.max == '' ? '100' : e.max);
+    e.style.setProperty('--max', e.max == '' ? '10' : e.max);
     e.addEventListener('input', () => e.style.setProperty('--value', e.value));
 }
 
@@ -114,7 +103,4 @@ document.getElementById("comment1").addEventListener("change", function (e) {
     document.getElementById("comment1").inputMode = "text"
 })
 
-
-
 // document.getElementById("range").addEventListener("touchend", (e) => rangeHandler(e))
-
