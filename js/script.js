@@ -84,7 +84,7 @@ function rangeHandler(e) {
 
 document.getElementById("range").addEventListener("change", (e) => rangeHandler(e))
 // document.getElementById("range").addEventListener("touchstart", (e) => rangeHandler(e))
-document.getElementById("range").addEventListener("touchmove", (e) => rangeHandler(e))
+// document.getElementById("range").addEventListener("touchmove", (e) => rangeHandler(e))
 document.getElementById("range").addEventListener("touchend", (e) => rangeHandler(e))
 
 document.getElementById("q-1").addEventListener("change", function (e) {
