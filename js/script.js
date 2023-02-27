@@ -10,7 +10,7 @@ function goTo(element) {
 
 
 function rangeHandler(e) {
-    console.log("click")
+    console.log(e.target.id)
     // e.preventDefault();
     // e.stopPropagation();
     // alert("hello")
@@ -19,7 +19,7 @@ function rangeHandler(e) {
         document.getElementById("initial-range").style.background = "#ED712E"
     }
     if (e.target.value == 0) {
-        document.getElementById("initial-range").style.background = "#898989"
+        document.getElementById("initial-range").style.background = "#ED712E"
     }
 
     if (e.target.value == 10) {
@@ -82,7 +82,12 @@ function rangeHandler(e) {
 }
 
 
-document.getElementById("range").addEventListener("change", (e) => rangeHandler(e))
+document.getElementById("range").addEventListener("click", (e) => rangeHandler(e))
+document.getElementById("initial-range").addEventListener("click", (e) => rangeHandler(e))
+document.getElementById("initial-range-right").addEventListener("click", (e) => rangeHandler(e))
+
+
+
 // document.getElementById("range").addEventListener("touchstart", (e) => rangeHandler(e))
 // document.getElementById("range").addEventListener("touchmove", (e) => rangeHandler(e))
 // document.getElementById("range").addEventListener("touchend", (e) => rangeHandler(e))
