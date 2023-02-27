@@ -108,3 +108,38 @@ document.getElementById("comment1").addEventListener("change", function (e) {
     document.getElementById("comment1").inputMode = "none"
     document.getElementById("comment1").inputMode = "text"
 })
+
+
+
+
+
+
+
+
+
+
+
+var diagramSlider = document.querySelector(".diagram-bar");
+
+function iosPolyfill(e) {
+  var val = (e.pageX - diagramSlider.getBoundingClientRect().left) /
+   (diagramSlider.getBoundingClientRect().right - diagramSlider.getBoundingClientRect().left),
+  max = diagramSlider.getAttribute("max"),
+  segment = 1 / (max - 1),
+  segmentArr = [];
+
+  max++;
+
+  for (var i = 0; i < max; i++) {
+    segmentArr.push(segment * i);
+  }
+
+  var segCopy = segmentArr.slice(),
+  ind = segmentArr.sort((a, b) => Math.abs(val - a) - Math.abs(val - b))[0];
+
+  diagramSlider.value = segCopy.indexOf(ind) + 1;
+}
+
+if (!!navigator.platform.match(/iPhone|iPod|iPad/)) {
+  diagramSlider.addEventListener("touchend", iosPolyfill, {passive: true});
+}
