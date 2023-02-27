@@ -9,7 +9,8 @@
     <title>Xiaomi</title>
     <link rel="shortcut icon" href="./img/favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -47,10 +48,25 @@
                         </tr>
                     </table>
                     <div class="range-container">
-                        <input type="range" id="range" min="0" max="10" value="0" step="1" name="diagram selector" oninput="this.nextElementSibling.value = this.value">
+                        <input type="range" id="range" min="0" max="10" value="0" step="1" name="diagram selector"
+                            oninput="this.nextElementSibling.value = this.value">
                         <output class="output hidden" id="output" name="output" for="range">0</output>
                         <div id="initial-range" class="initial-range"></div>
                         <div id="initial-range-right" class="initial-range-right"></div>
+                    </div>
+
+
+
+                    <p>Audio settings:</p>
+
+                    <div>
+                        <input type="range" id="volume" name="volume" min="0" max="11">
+                        <label for="volume">Volume</label>
+                    </div>
+
+                    <div>
+                        <input type="range" id="cowbell" name="cowbell" min="0" max="100" value="90" step="10">
+                        <label for="cowbell">Cowbell</label>
                     </div>
                 </fieldset>
 
