@@ -143,3 +143,7 @@ function iosPolyfill(e) {
 if (!!navigator.platform.match(/iPhone|iPod|iPad/)) {
   diagramSlider.addEventListener("touchend", iosPolyfill, {passive: true});
 }
+
+
+
+document.getElementById("range").addEventListener("touchend", (e) => rangeHandler(e))
