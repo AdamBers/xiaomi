@@ -9,26 +9,14 @@ function goTo(element) {
 
 const range = new RangeTouch('input[type="range"]')
 
-
 function rangeHandler(e) {
+    let inputValue = e.target.value
+    if (inputValue > 0) { document.getElementById("initial-range").style.background = "#ED712E" }
+    if (inputValue == 0) { document.getElementById("initial-range").style.background = "#ED712E" }
 
-    if (e.target.value > 0) {
-        document.getElementById("initial-range").style.background = "#ED712E"
-    }
-    if (e.target.value == 0) {
-        document.getElementById("initial-range").style.background = "#ED712E"
-    }
+    if (inputValue == 10) { document.getElementById("initial-range-right").style.background = "#ED712E" }
 
-    if (e.target.value == 10) {
-        document.getElementById("initial-range-right").style.background = "#ED712E"
-    }
-
-    if (e.target.value < 10) {
-        document.getElementById("initial-range-right").style.background = "#E7E7E7"
-    }
-
-    // document.getElementById("initial-range").style.display = "none"
-
+    if (inputValue < 10) { document.getElementById("initial-range-right").style.background = "#E7E7E7" }
 
     document.getElementById("knowledge").checked = false
     document.getElementById("quality").checked = false
@@ -43,27 +31,31 @@ function rangeHandler(e) {
     document.getElementById("q-2").classList.remove("hidden")
     document.getElementById("content").classList.remove("hidden")
 
-    if (e.target.value <= 6) {
+    if (inputValue <= 6) {
         document.getElementById("qp-1").classList.remove("hidden")
         document.getElementById("qp-2").classList.add("hidden")
         document.getElementById("qp-3").classList.add("hidden")
     }
-    if (e.target.value == 7 || e.target.value == 8) {
+    if (inputValue == 7 || inputValue == 8) {
         document.getElementById("qp-2").classList.remove("hidden")
         document.getElementById("qp-1").classList.add("hidden")
         document.getElementById("qp-3").classList.add("hidden")
     }
-    if (e.target.value == 9 || e.target.value == 10) {
+    if (inputValue == 9 || inputValue == 10) {
         document.getElementById("qp-3").classList.remove("hidden")
         document.getElementById("qp-2").classList.add("hidden")
         document.getElementById("qp-1").classList.add("hidden")
     }
 
-    let leftPos = e.target.value * 10 + "%"
+    let leftPos = inputValue * 10 + "%"
     document.getElementById("output").style.left = `calc(${leftPos} - 24px)`
     goTo("q-1")
 }
+
 document.getElementById("range").addEventListener("change", (e) => rangeHandler(e))
+document.getElementById("range").addEventListener("click", function (e) {
+    if (e.target.value == 0) { rangeHandler(e) }
+})
 
 document.getElementById("q-1").addEventListener("change", function (e) {
     if (document.querySelector('input[name="grade"]:checked') !== null) {
