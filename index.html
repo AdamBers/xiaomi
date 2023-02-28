@@ -8,9 +8,6 @@
     <link rel="stylesheet" href="./css/style.css">
     <title>Xiaomi</title>
     <link rel="shortcut icon" href="./img/favicon.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
-        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -47,27 +44,23 @@
                             <td></td>
                         </tr>
                     </table>
+                    <!-- <div class="range-container">
+                        <input type="range" id="range" min="0" max="10" value="0" step="1"
+                            oninput="this.nextElementSibling.value = this.value">
+                        <output class="output hidden" id="output" name="output" for="range">0</output>
+
+                    </div> -->
+
+
                     <div class="range-container">
                         <input type="range" id="range" min="0" max="10" value="0" step="1" name="diagram selector"
-                            oninput="this.nextElementSibling.value = this.value" class="range styled-slider slider-progress">
+                            oninput="this.nextElementSibling.value = this.value"
+                            class="range styled-slider slider-progress">
                         <output class="output hidden" id="output" name="output" for="range">0</output>
                         <div id="initial-range" class="initial-range"></div>
                         <div id="initial-range-right" class="initial-range-right"></div>
                     </div>
 
-
-
-                    <!-- <p>Audio settings:</p>
-
-                    <div>
-                        <input type="range" id="volume" name="volume" min="0" max="11">
-                        <label for="volume">Volume</label>
-                    </div>
-
-                    <div>
-                        <input type="range" id="cowbell" name="cowbell" min="0" max="100" value="90" step="10">
-                        <label for="cowbell">Cowbell</label>
-                    </div> -->
                 </fieldset>
 
                 <!-- <div class="container hidden"> -->
@@ -77,18 +70,38 @@
                         <p id="qp-1" class="hidden">Укажите, что именно Вы бы хотели изменить?</p>
                         <p id="qp-2" class="hidden">Укажите, что именно Вы бы хотели улучшить?</p>
                         <p id="qp-3" class="hidden">Укажите, что именно Вам понравилось в магазине?</p>
-                        <input type="checkbox" id="quality" name="grade" value="quality">
-                        <label for="quality">Качество продукции</label>
-                        <input type="checkbox" id="prices" name="grade" value="prices">
-                        <label for="prices">Цены</label>
-                        <input type="checkbox" id="knowledge" name="grade" value="knowledge">
-                        <label for="knowledge">Знания персонала и качество обслуживания</label>
-                        <input type="checkbox" id="atmosphere" name="grade" value="atmosphere">
-                        <label for="atmosphere">Атмосфера в магазине</label>
-                        <input type="checkbox" id="choice" name="grade" value="choice">
-                        <label for="choice">Ассортимент магазина</label>
-                        <input type="checkbox" id="another" name="grade" value="another">
-                        <label for="another">Другое</label>
+
+                        <div class="reasons">
+                            <div class="reason">
+                                <input type="checkbox" id="quality" name="grade" value="quality">
+                                <label for="quality">Качество продукции</label>
+                            </div>
+
+                            <div class="reason">
+                                <input type="checkbox" id="prices" name="grade" value="prices">
+                                <label for="prices">Цены</label>
+                            </div>
+
+                            <div class="reason">
+                                <input type="checkbox" id="knowledge" name="grade" value="knowledge">
+                                <label for="knowledge">Знания персонала и качество обслуживания</label>
+                            </div>
+
+                            <div class="reason">
+                                <input type="checkbox" id="atmosphere" name="grade" value="atmosphere">
+                                <label for="atmosphere">Атмосфера в магазине</label>
+                            </div>
+
+                            <div class="reason">
+                                <input type="checkbox" id="choice" name="grade" value="choice">
+                                <label for="choice">Ассортимент магазина</label>
+                            </div>
+
+                            <div class="reason">
+                                <input type="checkbox" id="another" name="grade" value="another">
+                                <label for="another">Другое</label>
+                            </div>
+                        </div>
                     </fieldset>
 
                     <!-- </div> -->
@@ -109,7 +122,10 @@
         <input type="submit" id="send" class="hidden" form="myForm" value="Далее">
     </div>
 
-    <script src="./js/script.js"></script>
+
+    <script src="https://cdn.rangetouch.com/2.0.1/rangetouch.js"></script>
+    <script src="/js/script.js"></script>
+
 </body>
 
 </html>

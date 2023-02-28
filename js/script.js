@@ -7,12 +7,10 @@ function goTo(element) {
     }, 600)
 }
 
+const range = new RangeTouch('input[type="range"]')
+
+
 function rangeHandler(e) {
-    console.log(e.target)
-    // e.preventDefault();
-    // e.stopPropagation();
-    // alert("hello")
-    
 
     if (e.target.value > 0) {
         document.getElementById("initial-range").style.background = "#ED712E"
@@ -31,7 +29,6 @@ function rangeHandler(e) {
 
     // document.getElementById("initial-range").style.display = "none"
 
-    // console.log(document.getElementById("knowledge").checked = false)
 
     document.getElementById("knowledge").checked = false
     document.getElementById("quality").checked = false
@@ -41,19 +38,11 @@ function rangeHandler(e) {
     document.getElementById("another").checked = false
     document.getElementById("send").classList.add("hidden")
 
-    setTimeout(function () {
-        document.getElementById("knowledge").style.top = document.getElementById("knowledge").labels[0].offsetHeight / 2 + 7 + "px"
-        document.getElementById("quality").style.top = document.getElementById("quality").labels[0].offsetHeight / 2 + 7 + "px"
-        document.getElementById("prices").style.top = document.getElementById("prices").labels[0].offsetHeight / 2 + 7 + "px"
-        document.getElementById("atmosphere").style.top = document.getElementById("atmosphere").labels[0].offsetHeight / 2 + 7 + "px"
-        document.getElementById("choice").style.top = document.getElementById("choice").labels[0].offsetHeight / 2 + 7 + "px"
-        document.getElementById("another").style.top = document.getElementById("another").labels[0].offsetHeight / 2 + 7 + "px"
-    }, 100)
-
     document.getElementById("output").classList.remove("hidden")
     document.getElementById("q-1").classList.remove("hidden")
     document.getElementById("q-2").classList.remove("hidden")
     document.getElementById("content").classList.remove("hidden")
+
     if (e.target.value <= 6) {
         document.getElementById("qp-1").classList.remove("hidden")
         document.getElementById("qp-2").classList.add("hidden")
@@ -74,13 +63,7 @@ function rangeHandler(e) {
     document.getElementById("output").style.left = `calc(${leftPos} - 24px)`
     goTo("q-1")
 }
-
-document.getElementById("range").addEventListener("click", (e) => rangeHandler(e))
-document.getElementById("range").addEventListener("touchend", (e) => rangeHandler(e))
-
-// document.getElementById("range").addEventListener("touchstart", (e) => rangeHandler(e))
-// document.getElementById("range").addEventListener("touchmove", (e) => rangeHandler(e))
-// document.getElementById("range").addEventListener("touchend", (e) => rangeHandler(e))
+document.getElementById("range").addEventListener("change", (e) => rangeHandler(e))
 
 document.getElementById("q-1").addEventListener("change", function (e) {
     if (document.querySelector('input[name="grade"]:checked') !== null) {
@@ -91,6 +74,14 @@ document.getElementById("q-1").addEventListener("change", function (e) {
     }
 })
 
+document.getElementById("comment1").addEventListener("change", function (e) {
+    document.getElementById("comment1").blur()
+    document.getElementById("comment1").inputMode = "none"
+    document.getElementById("comment1").inputMode = "text"
+})
+
+
+
 for (let e of document.querySelectorAll('input[type="range"].slider-progress')) {
     e.style.setProperty('--value', e.value);
     e.style.setProperty('--min', e.min == '' ? '0' : e.min);
@@ -98,10 +89,4 @@ for (let e of document.querySelectorAll('input[type="range"].slider-progress')) 
     e.addEventListener('input', () => e.style.setProperty('--value', e.value));
 }
 
-document.getElementById("comment1").addEventListener("change", function (e) {
-    document.getElementById("comment1").blur()
-    document.getElementById("comment1").inputMode = "none"
-    document.getElementById("comment1").inputMode = "text"
-})
 
-// document.getElementById("range").addEventListener("touchend", (e) => rangeHandler(e))

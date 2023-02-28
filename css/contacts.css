@@ -45,9 +45,9 @@ input[type="submit"] {
     bottom: 12px;
     margin: 0 16px;
     min-width: calc(100% - 32px);
-    height: 48px;
+    min-height: 48px !important;
     background-color: #191919;
-    border-radius: 8px;
+    border-radius: 10px !important;
     border: none;
     cursor: pointer;
     width: inherit;
@@ -58,6 +58,7 @@ input[type="submit"] {
     line-height: 22px;
     letter-spacing: -0.02em;
     color: #FAFAFA;
+    margin-top: 20px;
 }
 
 form {
