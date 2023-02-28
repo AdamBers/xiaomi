@@ -587,6 +587,7 @@ td {
     color: #737478;
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 
 #q-0 {
