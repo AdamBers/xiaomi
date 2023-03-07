@@ -23,6 +23,19 @@
                     <div class="main-question">
                         <p>Насколько вероятно, что Вы порекомендуете наш магазин друзьям и знакомым?</p>
                     </div>
+                    <div class="numbers">
+                        <span>0</span>
+                        <span>1</span>
+                        <span>2</span>
+                        <span>3</span>
+                        <span>4</span>
+                        <span>5</span>
+                        <span>6</span>
+                        <span>7</span>
+                        <span>8</span>
+                        <span>9</span>
+                        <span>10</span>
+                    </div>
                     <table>
                         <tr>
                             <th colspan="2"></th>
@@ -44,26 +57,17 @@
                             <td></td>
                         </tr>
                     </table>
-                    <!-- <div class="range-container">
-                        <input type="range" id="range" min="0" max="10" value="0" step="1"
-                            oninput="this.nextElementSibling.value = this.value">
-                        <output class="output hidden" id="output" name="output" for="range">0</output>
-
-                    </div> -->
-
 
                     <div class="range-container">
-                        <input type="range" id="range" min="0" max="10" value="0" step="1" name="diagram selector"
-                            oninput="this.nextElementSibling.value = this.value"
+                        <input type="range" id="range" min="-1" max="11" value="0" step="1" name="diagram selector"
+                            oninput="this.nextElementSibling.firstChild.innerHTML = this.value"
                             class="range styled-slider slider-progress">
-                        <output class="output hidden" id="output" name="output" for="range">0</output>
+                        <output class="output hidden inVisible" id="output" name="output" for="range"><span>0</span></output>
                         <div id="initial-range" class="initial-range"></div>
                         <div id="initial-range-right" class="initial-range-right"></div>
                     </div>
 
                 </fieldset>
-
-                <!-- <div class="container hidden"> -->
 
                 <div id="content" class="hidden">
                     <fieldset id="q-1" class="hidden">
@@ -97,31 +101,23 @@
                                 <label for="choice">Ассортимент магазина</label>
                             </div>
 
-                            <div class="reason">
+                            <div class="reason another">
                                 <input type="checkbox" id="another" name="grade" value="another">
                                 <label for="another">Другое</label>
                             </div>
                         </div>
                     </fieldset>
 
-                    <!-- </div> -->
-
                     <fieldset id="q-2" class="comment hidden">
-                        <input type="text" id="comment1" name="comment1" value="" placeholder="Комментарий">
-                    </fieldset>
+                        <textarea id="comment1" name="comment1" value="" placeholder="Комментарии"></textarea>
                 </div>
             </form>
         </div>
-
-
-
-
 
         <input type="submit" id="dontSend" class="hidden" form="myForm" value="Отправить" disabled
             onclick="return false;" style="display:none;">
         <input type="submit" id="send" class="hidden" form="myForm" value="Далее">
     </div>
-
 
     <script src="https://cdn.rangetouch.com/2.0.1/rangetouch.js"></script>
     <script src="/js/script.js"></script>

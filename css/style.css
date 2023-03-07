@@ -8,7 +8,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* background-color: #fff; */
     user-select: none;
     text-size-adjust: none;
     text-size-adjust: auto;
@@ -50,7 +49,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* margin-bottom: 24px; */
     background-color: #808384;
     padding: 17px;
 }
@@ -60,13 +58,13 @@ body {
 }
 
 form {
-    /* margin: 0 16px; */
-
     z-index: 0;
 }
 
 .main-question {
     padding: 0 16px;
+    margin-bottom: 32px;
+
 }
 
 
@@ -76,15 +74,9 @@ form {
     font-weight: 700;
     font-size: 20px;
     line-height: 24px;
-    /* or 120% */
-
     text-align: center;
     letter-spacing: -0.02em;
-
-    /* Black */
-
     color: #191919;
-    margin-bottom: 113px;
     padding-top: 24px;
 }
 
@@ -307,18 +299,7 @@ textarea::placeholder {
     line-height: 18px;
     color: rgba(0, 0, 0, 0.6);
     margin-bottom: 12px;
-    /* width: 300px; */
 }
-
-/* .question-title::before {
-    display: block;
-    content: '';
-    width: 180px;
-    margin: 9px auto 18px;
-    height: 4px;
-    background: #EE3B45;
-} */
-
 
 .sub-question {
     font-family: 'Roboto';
@@ -330,9 +311,6 @@ textarea::placeholder {
     padding-bottom: 24px;
     border-bottom: 1px solid #001C3D;
 }
-
-
-
 
 fieldset {
     border: none;
@@ -367,7 +345,7 @@ fieldset input[type=text] {
     background: #DBDBDC;
 }
 
-input[type=text]::placeholder {
+textarea::placeholder {
     font-family: 'Myriad Pro';
     font-style: normal;
     font-weight: 600;
@@ -543,7 +521,7 @@ th {
 
 td {
     width: calc(100% / 10);
-    height: 10px;
+    height: 8px;
     border-right: 1.5px solid #E7E7E7;
     border-left: 1.5px solid #E7E7E7;
 }
@@ -565,14 +543,10 @@ td {
 }
 
 ::-webkit-slider-runnable-track {
-    /* border: 1px solid red; */
     -webkit-appearance: none;
-    /* color: #13bba4; */
-    /* border-radius: 14px; */
     background: #E7E7E7;
     height: 28px;
     cursor: pointer;
-
 }
 
 
@@ -607,11 +581,11 @@ output {
     display: flex;
     align-items: center;
     justify-content: center;
-    top: -165px;
-    left: calc(50% - 24px);
+    top: -28px;
+    left: calc(0% - 24px);
     width: 48px;
     height: 57px;
-    background: url("../img/rect.svg");
+    background: url("../img/rect2.svg");
     background-size: 100% 100%;
     font-family: 'Poppins';
     font-style: normal;
@@ -621,9 +595,13 @@ output {
     text-align: center;
     letter-spacing: -0.02em;
     color: #FFFFFF;
-    margin-bottom: -40px;
+
 }
 
+output span {
+    position: relative;
+    top: 5px
+}
 
 .initial-range {
     width: 17px;
@@ -651,16 +629,12 @@ output {
     cursor: pointer
 }
 
-
-
-
-
-
 #comment1 {
     width: 100%;
     background: #FFFFFF;
     border: 1.5px solid #DBDBDC;
     border-radius: 8px;
+    min-height: 96px;
 }
 
 #comment1:focus {
@@ -687,8 +661,6 @@ input[type="checkbox"] {
     display: none;
 }
 
-
-
 input[type="checkbox"]+label::before {
     box-sizing: border-box;
     content: "";
@@ -698,7 +670,6 @@ input[type="checkbox"]+label::before {
     margin: 15px;
     background: url(/img/notChecked2.png);
     background-size: 100% 100%;
-
 }
 
 
@@ -738,10 +709,7 @@ input[type=range]::-webkit-slider-thumb {
     cursor: pointer;
     -webkit-appearance: none;
     margin-top: -10px;
-  }
-
-
-  
+}
 
 /*generated with Input range slider CSS style generator (version 20211225)
 https://toughengineer.github.io/demo/slider-styler*/
@@ -763,10 +731,19 @@ input[type=range].styled-slider:focus {
 
 /*webkit*/
 input[type=range].styled-slider::-webkit-slider-thumb {
+    position: relative;
     -webkit-appearance: none;
-    width: 0;
-    height: 28px;
-    visibility: hidden;
+    width: 48px;
+    height: 89px;
+    background: #000C1A;
+    /* left: -24px; */
+    top: 20px;
+    border-radius: none;
+    background: url("../img/rect2.svg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+
+    /* visibility: hidden; */
 }
 
 input[type=range].styled-slider::-webkit-slider-runnable-track {
@@ -902,4 +879,33 @@ input[type=range].styled-slider.slider-progress:hover::-ms-fill-lower {
 input[type=range].styled-slider.slider-progress:active::-ms-fill-lower {
     background: #ED712E;
     border-color: #ED712E;
+}
+
+
+
+.another {
+    margin-bottom: 0;
+}
+
+
+.numbers {
+    display: flex;
+    width: calc(100% + 6px);
+    justify-content: space-between;
+    align-items: center;
+    height: 24px;
+    margin-bottom: 8px;
+}
+
+.numbers span {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: #BCBFC4;
+    width: 12px;
+    margin-left: -6px;
 }
