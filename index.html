@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" href="./css/style.css">
     <title>Xiaomi</title>
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="shortcut icon" href="./img/favicon.png">
 </head>
 
@@ -59,12 +59,12 @@
                     </table>
 
                     <div class="range-container">
-                        <input type="range" id="range" min="-1" max="11" value="0" step="1" name="diagram selector"
+                        <input type="range" id="range" min="0" max="10" value="0" step="1" name="diagram selector"
                             oninput="this.nextElementSibling.firstChild.innerHTML = this.value"
                             class="range styled-slider slider-progress">
-                        <output class="output hidden inVisible" id="output" name="output" for="range"><span>0</span></output>
-                        <div id="initial-range" class="initial-range"></div>
-                        <div id="initial-range-right" class="initial-range-right"></div>
+                        <output class="output" id="output" name="output" for="range"><span>0</span></output>
+                        <div id="initial-range" class="initial-range" onclick="rangeHandler(event)"></div>
+                        <div id="initial-range-right" class="initial-range-right" onclick="rangeHandler(event)"></div>
                     </div>
 
                 </fieldset>
@@ -121,6 +121,7 @@
 
     <script src="https://cdn.rangetouch.com/2.0.1/rangetouch.js"></script>
     <script src="/js/script.js"></script>
+
 
 </body>
 

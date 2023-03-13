@@ -15,25 +15,81 @@ function goTo(element) {
 
 const range = new RangeTouch('input[type="range"]')
 
-document.getElementById("output").addEventListener("click", function () {
+document.getElementById("output").addEventListener("click", function (e) {
     document.getElementById("initial-range").style.background = "#ED712E"
     document.getElementById("output").style.backgroundImage = "url('/img/rect_orange.svg')"
+    document.getElementById("output").firstChild.style.color = "#fff"
 })
 document.getElementById("output").addEventListener("touchstart", function () {
     document.getElementById("initial-range").style.background = "#ED712E"
     document.getElementById("output").style.backgroundImage = "url('/img/rect_orange.svg')"
+    document.getElementById("output").firstChild.style.color = "#fff"
 })
 
+var mleft = "-16px"
+
 function rangeHandler(e) {
-    let inputValue = e.target.value
+    var inputValue = e.target.value
+
+
+
+    if (e.target.id == "initial-range") {
+        inputValue = 0
+        document.getElementById("range").value = 0
+        console.log(document.getElementById("range").value)
+        for (let e of document.querySelectorAll('input[type="range"].slider-progress')) {
+            e.style.setProperty('--value', e.value);
+            e.style.setProperty('--thumbLeftMargin', mleft);
+            e.style.setProperty('--min', e.min == '' ? '0' : e.min);
+            e.style.setProperty('--max', e.max == '' ? '10' : e.max);
+            e.addEventListener('input', () => e.style.setProperty('--value', e.value));
+        }
+        document.getElementById("output").firstChild.innerHTML = "0"
+    }
+
+    if (e.target.id == "initial-range-right") {
+        inputValue = 10
+        document.getElementById("range").value = inputValue
+        // document.getElementById("range").click()
+        console.log(document.getElementById("range").value)
+        for (let e of document.querySelectorAll('input[type="range"].slider-progress')) {
+            e.style.setProperty('--value', e.value);
+            e.style.setProperty('--thumbLeftMargin', mleft);
+            e.style.setProperty('--min', e.min == '' ? '0' : e.min);
+            e.style.setProperty('--max', e.max == '' ? '10' : e.max);
+            e.addEventListener('input', () => e.style.setProperty('--value', e.value));
+        }
+        document.getElementById("output").firstChild.innerHTML = "10"
+
+    }
+
+    mleft = inputValue * 3.2 - 16 + "px"
+    // console.log(mleft)
+
+    for (let e of document.querySelectorAll('input[type="range"].slider-progress')) {
+        e.style.setProperty('--thumbLeftMargin', mleft);
+    }
+
+
     if (inputValue > 8) {
         document.getElementById("myForm").action = "end_2.html"
     }
     if (inputValue < 9) {
         document.getElementById("myForm").action = "contacts.html"
     }
+
+
+    if (inputValue == 0) {
+        // document.getElementById("output").style.marginLeft = "-10px"
+    }
+
+
+
+
     document.getElementById("initial-range").style.background = "#ED712E"
     document.getElementById("output").style.backgroundImage = "url('/img/rect_orange.svg')"
+    document.getElementById("output").firstChild.style.color = "#fff"
+
     if (inputValue == 10) { document.getElementById("initial-range-right").style.background = "#ED712E" }
     if (inputValue < 10) { document.getElementById("initial-range-right").style.background = "#E7E7E7" }
 
@@ -67,7 +123,7 @@ function rangeHandler(e) {
     }
 
     let leftPos = inputValue * 10 + "%"
-    document.getElementById("output").style.left = `calc(${leftPos} - 24px)`
+    document.getElementById("output").style.left = `calc(${leftPos} - 0px)`
     // goTo("q-1")
 }
 
@@ -77,6 +133,7 @@ function rangeHandler(e) {
 document.getElementById("range").addEventListener("input", (e) => rangeHandler(e))
 document.getElementById("range").addEventListener("click", function (e) {
     goTo("q-1")
+
     if (e.target.value == 0) { rangeHandler(e) }
 })
 document.getElementById("range").addEventListener("touchend", function (e) {
@@ -102,9 +159,9 @@ document.getElementById("comment1").addEventListener("change", function (e) {
 
 for (let e of document.querySelectorAll('input[type="range"].slider-progress')) {
     e.style.setProperty('--value', e.value);
+    e.style.setProperty('--thumbLeftMargin', mleft);
     e.style.setProperty('--min', e.min == '' ? '0' : e.min);
     e.style.setProperty('--max', e.max == '' ? '10' : e.max);
     e.addEventListener('input', () => e.style.setProperty('--value', e.value));
 }
-
 
