@@ -278,8 +278,14 @@ textarea::placeholder {
 }
 
 ::-webkit-scrollbar-thumb {
-    -webkit-appearance: none;
+    border: 7px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    border-radius: 9999px;
+    background-color: #E7E7E7;
+    background: #E7E7E7;
 
+    height: 28px;
+    cursor: pointer;
 }
 
 
